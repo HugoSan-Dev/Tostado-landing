@@ -1,0 +1,26 @@
+:root{
+    --color-bg: #FAF6F0;
+    --color-surface: #FFFFFF;
+    --color-primary: #3E2723;
+    --color-accent: #C8742B;
+    --color-accent-dark: #9A5516;
+    --color-muted: #6D5D55;
+    --color-dark-section: #2B1B17;
+    --color-border: #E6DCD0
+
+    --space-1: .5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-6: 3rem;
+    --space-8: 4rem;
+    --space-12: 6rem;
+
+    --radius-1: 1rem;
+    --radius-2: 1.25rem;
+    --radius-3: 999px;
+
+    --shadow-card: 0 8px 24px rgba(62,39,35,.08)
+
+    
+}
