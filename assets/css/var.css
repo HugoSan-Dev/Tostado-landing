@@ -7,6 +7,7 @@
     --color-muted: #6D5D55;
     --color-dark-section: #2B1B17;
     --color-border: #E6DCD0;
+    --color-bg-dark: #F1E7D8;
 
     --space-1: .5rem;
     --space-2: 1rem;
@@ -21,6 +22,5 @@
     --radius-3: 999px;
 
     --shadow-card: 0 8px 24px rgba(62,39,35,.08)
-
     
 }
