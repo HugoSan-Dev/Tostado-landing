@@ -76,12 +76,13 @@ body{
 .ours{
     width: 100%;
     background-color: var(--color-bg);
-    padding: 56px 1rem;
+    padding: 56px var(--space-2);
 }
 .ours{
-    background-color: var(--color--surface);
+    background-color: var(--color-surface);
     display: grid;
     gap: var(--space-6);
+    padding: var(--space-8) var(--space-2);
 }
 .column{
     display: grid;
@@ -173,18 +174,20 @@ body{
 
 
 .menu{
-    margin: 0 auto;
-    max-width: 1120px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--space-6);
+    padding: var(--space-8) 0;
+    background-color: var(--color-bg);
 }
 .menu-header{
     display: flex;
     flex-direction: column;
     gap: var(--space-2);
     align-items: center;
+    max-width: 1120px;
+
 }
 .menu-header > .h2{
     font-size: clamp(24px, 5vw, 44px);
@@ -198,6 +201,7 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(calc(33% - var(--space-3)),1fr));
     gap: var(--space-3);
+    max-width: 1120px;
 }
 
 .card{
@@ -205,6 +209,7 @@ body{
     box-shadow: var(--shadow-card);
     overflow: hidden;
     color: var(--color-muted);
+    background-color: var(--color-surface);
 }
 .card > .card-picture img {
     width: 100%;
@@ -235,5 +240,8 @@ body{
 .state{
     padding: 4px 12px;
     border-radius: var(--radius-3);
-    background-color: var(--color--surface);
+    background-color: var(--color-bg-dark);
+    color: var(--color-primary);
+    font-size: clamp(12px, 2vw, 13px);
+    font-weight: 500;
 }
