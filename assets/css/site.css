@@ -54,28 +54,42 @@ body{
     background-color: var(--color-primary);
     color: var(--color-bg);
     border-radius: var(--radius-3);
+}
 
-}
-.btn-primary:hover{
-    background-color: var(--color-accent-dark);
-}
 .btn-secondary{
     border-radius: var(--radius-3);
     border: 2px solid var(--color-primary);
 }
 
+.btn-primary:hover{
+    background-color: var(--color-accent-dark);
+}
+
+.btn-secondary:hover{
+    color: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
+}
+
 /* SECTION START */
-.start{
+.start,
+.ours{
     width: 100%;
     background-color: var(--color-bg);
     padding: 56px 1rem;
+}
+.ours{
+    background-color: var(--color--surface);
+    display: grid;
+    gap: var(--space-6);
 }
 .column{
     display: grid;
     place-content: center;
     gap: var(--space-3);
 }
-.cafe{
+.cafe,
+.barista,
+.origins{
     margin: 0 auto;
     max-width: 1120px;
     display: grid;
@@ -83,6 +97,38 @@ body{
     grid-auto-rows: minmax(100px, auto);
     gap: var(--space-8);
     place-items:center;
+}
+.barista{
+    grid-template-columns: repeat(auto-fill,minmax(calc(20% - var(--space-8)), 1fr));
+}
+.barista .column:nth-child(2){
+    grid-column: 3 / 6;
+}
+.barista .column:nth-child(1){
+    grid-column: 1 / 3;
+}
+.origins{
+    display: flex;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    place-items: unset;
+}
+.origins {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 40px;
+    color: var(--color-muted);
+    border-top: 1px solid var(--color-border);
+}
+.origins li p:nth-child(1){
+    font-family: 'Fraunces';
+    font-weight: bold;
+    font-size: clamp(24px, 5vw, 40px);
+    color: var(--color-accent);
+}
+.origins li p:nth-child(2){
+    font-size: clamp(14px,2vw,15px);
 }
 .cafe-img{
     width: 100%;
@@ -102,6 +148,12 @@ body{
     font-family: 'Fraunces';
     font-weight: bold;
 }
+.barista .column:nth-child(2) .h2{
+    font-size: clamp(24px, 8vw, 44px);
+}
+.barista .column:nth-child(2) .paragraph{
+    max-width: unset;
+}
 .paragraph{
     color: var(--color-muted);
     font-size: clamp(15px,2vw, 18px);
@@ -112,4 +164,7 @@ body{
     gap: var(--space-1);
     padding-top: 8px;
 
+}
+.start-cafe img{
+    border-radius: var(--radius-2);
 }
