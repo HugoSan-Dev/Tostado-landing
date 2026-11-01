@@ -73,16 +73,29 @@ body{
 }
 
 .start,
-.ours{
+.ours,
+.hours_contact{
     width: 100%;
     background-color: var(--color-bg);
     padding: 56px var(--space-2);
+}
+.hours_contact{
+    background-color: var(--color-dark-section);
+    color: var(--color-bg);
+}
+.hours_contact > .cafe{
+    gap: var(--space-3);
 }
 .ours{
     background-color: var(--color-surface);
     display: grid;
     gap: var(--space-6);
     padding: var(--space-8) var(--space-2);
+}
+.hours_contact .cafe .column{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
 }
 .column{
     display: grid;
@@ -151,11 +164,26 @@ body{
     font-family: 'Fraunces';
     font-weight: bold;
 }
-.barista .column:nth-child(2) .h2{
+.barista .column:nth-child(2) .h2,
+.hours_contact .cafe .column:nth-child(1) .h2{
     font-size: clamp(24px, 8vw, 44px);
 }
-.barista .column:nth-child(2) .paragraph{
+.barista .column:nth-child(2) .paragraph,
+.hours_contact .cafe .column:nth-child(1) .paragraph{
     max-width: unset;
+}
+.hours_contact .cafe .column:nth-child(1) .paragraph{
+    color: var(--color-border);
+}
+.hours_contact .cafe .column {
+    width: 100%;
+}
+.hours_contact .cafe .column:nth-child(1) p:nth-child(1){
+    color: var(--color-accent);
+}
+.hours_contact .cafe .column:nth-child(1) .h3{
+    color: var(--color-border);
+    font-size: clamp(12px, 2vw, 13px);
 }
 .paragraph{
     color: var(--color-muted);
@@ -294,4 +322,21 @@ body{
     color: var(--color-primary);
     font-size: clamp(12px, 2vw, 13px);
     font-weight: 500;
+}
+
+.schedule{
+    width: 100%;
+    flex: 1;
+}
+.schedule thead tr th{
+    text-align: start;
+}
+.schedule thead tr th,
+.schedule tbody tr td{
+    padding: 12px 0px;
+    border-bottom: 1px solid var(--color-muted);
+}
+.schedule thead tr th:nth-child(2),
+.schedule tbody tr td:nth-child(2){
+    text-align: end;
 }
