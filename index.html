@@ -292,36 +292,39 @@
                 </section>
                 <div class="column">
                     <form action="" class="form">
-                        <fieldset>
-                            <legend>Reserva tu mesa</legend>
+                        <fieldset class="fieldset">
+                            <legend class="legend">Reserva tu mesa</legend>
+                            <div class="group">
+                                <label class="label" for="name">Nombre</label>
+                                <input class="control" type="text" name="name" id="name" placeholder="Tu nombre">
+                            </div>
+                            <div class="group">
+                                <label class="label" for="email">Correo</label>
+                                <input class="control" type="email" name="email" id="email" placeholder="tu@correo.com">
+                            </div>
+                            <div class="group">
+                                <div class="column">
+                                    <label class="label" for="date">Fecha</label>
+                                    <input class="control" type="date" name="date" id="date">
+                                </div>
+                                <div class="column">
+                                    <label class="label" for="number_people">Personas</label>
+                                    <select class="control" name="number_people" id="number_people">
+                                        <option value="1">1</option>
+                                        <option selected value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <label class="label" for="message">Mensaje</label>
+                                <textarea class="textarea" name="message" id="message"
+                                    placeholder="Alergías, Celebración, etc."></textarea>
+                            </div>
                         </fieldset>
-                        <div class="group">
-                            <label for="name">Nombre</label>
-                            <input type="text" name="name" id="name" placeholder="Tu nombre">
-                        </div>
-                        <div class="group">
-                            <label for="email">Correo</label>
-                            <input type="email" name="email" id="email" placeholder="tu@correo.com">
-                        </div>
-                        <div class="group">
-                            <div class="column">
-                                <label for="date">Fecha</label>
-                                <input type="datetime" name="date" id="date">
-                            </div>
-                            <div class="column">
-                                <label for="number_people">Personas</label>
-                                <select name="number_people" id="number_people">
-                                    <option value="1">1</option>
-                                    <option selected value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="group">
-                            <label for="message">Mensaje</label>
-                            <textarea name="message" id="message" placeholder="Alergías, Celebración, etc."></textarea>
-                        </div>
+
+                        <input class="btn btn-primary submit" type="submit" value="Enviar reserva">
                     </form>
                 </div>
 
