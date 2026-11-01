@@ -75,15 +75,16 @@ body{
 
 .start,
 .ours,
-.hours_contact{
+.hours_contact,
+.footer{
     width: 100%;
     background-color: var(--color-bg);
     padding: 56px var(--space-2);
 }
-.hours_contact{
+.hours_contact,
+.footer{
     background-color: var(--color-dark-section);
     color: var(--color-bg);
-    
 }
 
 .hours_contact > .cafe{
@@ -397,4 +398,14 @@ body{
 }
 .group:has(.column) .column{
     gap: 6px;
+}
+.footer .group{
+    max-width: 1120px;
+    margin: 0 auto;
+    gap: 40px;
+}
+.copy{
+    border-top: 1px solid var(--color-muted);
+    padding-top: var(--space-3);
+    font-size: clamp(13px, 2vw, 14px);
 }
