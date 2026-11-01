@@ -10,6 +10,7 @@ body{
     color: inherit;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 .container-nav{
     max-width: 1120px;
@@ -82,9 +83,11 @@ body{
 .hours_contact{
     background-color: var(--color-dark-section);
     color: var(--color-bg);
+    
 }
+
 .hours_contact > .cafe{
-    gap: var(--space-3);
+    gap: var(--space-8);
 }
 .ours{
     background-color: var(--color-surface);
@@ -254,6 +257,7 @@ body{
     width: 100%;
     height: 100%;
     position: relative;
+    z-index: 0;
 }
 .gallery .cards li .card p{
     background-image: linear-gradient(180deg, transparent 70%, black );
@@ -339,4 +343,58 @@ body{
 .schedule thead tr th:nth-child(2),
 .schedule tbody tr td:nth-child(2){
     text-align: end;
+}
+
+.form{
+    padding: 40px;
+    border-radius: var(--radius-1);
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+}
+.fieldset{
+    display: flex;
+    border: 0;
+    flex-direction: column;
+    gap: 20px;
+}
+.legend{
+    margin-bottom: 1.25rem;
+    font-size: clamp(20px, 2vw, 24px);
+    font-family: 'Fraunces';
+    font-weight: 600;
+}
+.group{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.label{
+    font-size: 14px;
+    font-weight: 500;
+}
+.control,
+.textarea{
+    outline: none;
+    border: 1.5px solid var(--color-border);
+    border-radius: 12px;
+    padding: 13px 1rem;
+    color: inherit;
+    font-size: clamp(15px, 2vw, 1rem);
+}
+.textarea{
+    resize: none;
+}
+.control:focus{
+    border-color: var(--color-accent);
+}
+.submit{
+    margin-top: 18px;
+    width: 100%;
+}
+.group:has(.column){
+    flex-direction: unset;
+    gap: 1rem;
+}
+.group:has(.column) .column{
+    gap: 6px;
 }
